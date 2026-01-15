@@ -30,6 +30,20 @@ form h1 {
   color: #1a2530;
 }
 
+.image {
+  position: fixed;       /* cố định vị trí */
+  top: 20px;              /* cách mép trên 20px */
+  right: 20px;            /* cách mép phải 20px */
+  z-index: 1000;          /* đảm bảo nằm trên các phần khác */
+}
+
+.image img {
+  width: 200px;           /* ✅ thu nhỏ hình ảnh */
+  height: auto;
+  border-radius: 4px;     /* tuỳ chọn: bo góc nhẹ */
+}
+
+
 form h2 {
   text-align: start ;
   font-size: 30px;
@@ -94,7 +108,7 @@ select:focus {
 
 .row-field0 input,
 .row-field0 select {
-  width: 100%;
+  width: 20%;
   padding: 8px;
   font-size:  
 }
@@ -104,7 +118,7 @@ select:focus {
   display: grid;
   grid-template-columns: 50px 1fr;
   align-items: center;
-  gap: 30px;
+  gap: 60px;
   margin-bottom: 14px;
 }
 
@@ -137,7 +151,7 @@ select:focus {
 
 .row-field1 input,
 .row-field1 select {
-  width: 50%;
+  width: 20%;
   padding: 8px;
   font-size:  
 }
