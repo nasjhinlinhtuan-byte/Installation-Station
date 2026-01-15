@@ -31,10 +31,10 @@ form h1 {
 }
 
 form h2 {
-  text-align: center;
-  font-size: 15px;
+  text-align: start ;
+  font-size: 30px;
   margin-bottom: 20px;
-  color: #1f4e79; /* xanh đậm giống trong hình */
+  color: #000000; /* xanh đậm giống trong hình */
 }
 
 /* ====== FIELDSET ====== */
@@ -78,6 +78,26 @@ select:focus {
   outline: none;
 }
 
+.row-field0 {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.row-field0 label {
+  font-weight: bold;
+  text-align: start;
+  color: #2c3e50;
+}
+
+.row-field0 input,
+.row-field0 select {
+  width: 100%;
+  padding: 8px;
+  font-size:  
+}
 
 
 .row-field {
@@ -90,13 +110,13 @@ select:focus {
 
 .row-field label {
   font-weight: bold;
-  text-align: right;
+  text-align: start;
   color: #2c3e50;
 }
 
 .row-field input,
 .row-field select {
-  width: 70%;
+  width: 15%;
   padding: 8px;
   font-size:  
 }
@@ -111,7 +131,7 @@ select:focus {
 
 .row-field1 label {
   font-weight: bold;
-  text-align: right;
+  text-align: start;
   color: #2c3e50;
 }
 
@@ -127,7 +147,7 @@ select:focus {
 .row-date-nb {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 0px;
   margin-bottom: 20px;
 }
 
@@ -135,17 +155,17 @@ select:focus {
   display: grid;
   grid-template-columns: 160px 1fr;
   align-items: start; /* ✅ sửa từ center thành start */
-  gap: 12px;
+  gap: 0px;
 }
 
 .date-block label {
   font-weight: bold;
-  text-align: center;
+  text-align: start;
   color: #2c3e50;
 }
 
 .date-block input[type="date"] {
-  width: 100%;
+  width: 30%;
   padding: 8px;
   font-size: 14px;
   border: 1px solid #bfbfbf;
@@ -170,7 +190,7 @@ select:focus {
 
 .nb-block label {
   font-weight: bold;
-  text-align: right;
+  text-align: start;
   color: #2c3e50;
 }
 
@@ -198,12 +218,12 @@ select:focus {
     display: grid;
     grid-template-columns: 100px 1fr;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
   }
 
   .pair-block label {
     font-weight: bold;
-    text-align: right;
+    text-align: start;
     color: #2c3e50;
   }
 
@@ -231,7 +251,7 @@ select:focus {
 
 .cell-label {
   font-weight: bold;
-  text-align: center;
+  text-align: start;
   color: #2c3e50;
   background-color: #e0ecf8;
   padding: 6px 0;
