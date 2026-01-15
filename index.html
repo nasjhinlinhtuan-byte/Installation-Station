@@ -4,17 +4,31 @@
 
   <h1>DEMANDE D'INSTALLATION DE STATION CHARGEUR SIGMA</h1>
   <h2>Zone à compléter par le service commercial</h2>
-<div class="row-date-pair">
+<div class="row-date-nb">
+  <!-- Cột trái: Date demande -->
   <div class="date-block">
     <label for="date-demande">Date demande</label>
     <input type="date" id="date-demande" name="Date demande">
   </div>
 
-  <div class="date-block">
-    <label for="date-service">Date de mise en service demandée</label>
-    <input type="date" id="date-service" name="Date mise en service">
+  <!-- Cột phải: Date de mise en service + nhóm Nb -->
+  <div class="date-nb-group">
+    <div class="date-block">
+      <label for="date-service">Date de mise en service demandée</label>
+      <input type="date" id="date-service" name="Date mise en service">
+    </div>
+
+    <div class="nb-block">
+      <label for="nb-exp">Nb d'expéditions / Jours prévues</label>
+      <input type="text" id="nb-exp" name="Nb expéditions">
+
+      <label for="nb-colis">Nb de colis par jours</label>
+      <input type="text" id="nb-colis" name="Nb colis">
+    </div>
   </div>
 </div>
+
+
 
   <script>
     const today = new Date().toISOString().split("T")[0];
@@ -22,15 +36,7 @@
     document.getElementById("date-service").value = today;
   </script>
 
-  <div class="row-field">
-    <label for="nb-exp">Nb d'expéditions / Jours prévues</label>
-    <input type="text" id="nb-exp" name="Nb expéditions">
-  </div>
-
-  <div class="row-field">
-    <label for="nb-colis">Nb de colis par jours</label>
-    <input type="text" id="nb-colis" name="Nb colis">
-  </div>
+ 
 
   <div class="row-field">
     <label for="produit">Produit</label>
@@ -116,38 +122,115 @@
   <input type="text" id="email-util" name="Email">
 </div>
 
-  <div class="row-field">
-    <label for="erm">Compte ERM</label>
-    <input type="text" id="erm" name="Compte ERM">
-  </div>
 
-  <div class="row-field">
-    <label for="nom">Nom</label>
-    <input type="text" id="nom" name="Nom">
-  </div>
+<!-- Hàng label -->
+<div class="row-labels">
+  <div class="cell-label">Compte ERM</div>
+  <div class="cell-label">Nom</div>
+  <div class="cell-label">Taxe</div>
+  <div class="cell-label">Prestation(s) vendue(s)</div>
+</div>
 
-  <div class="row-field">
-    <label for="taxe">Taxe</label>
-    <input type="text" id="taxe" name="Taxe">
+<!-- Hàng input -->
+<div class="row-inputs">
+  <div class="cell-input"><input type="text" name="Compte ERM"></div>
+  <div class="cell-input"><input type="text" name="Nom"></div>
+  <label><input type="checkbox" name="Kg"> Kg</label>
+  <div class="cell-input checkbox-group">
+    <label><input type="checkbox" name="Mes"> Mes</label>
+    <label><input type="checkbox" name="Exp"> Exp</label>
+    <label><input type="checkbox" name="Euro"> Euro</label>
+    <label><input type="checkbox" name="Pal"> Pal</label>
+    <label><input type="checkbox" name="Lot"> Lot</label>
+    <label><input type="checkbox" name="S+"> S+</label>
+    <label><input type="checkbox" name="Hpd"> Hpd</label>
+    <label><input type="checkbox" name="Xps"> Xps</label>
+    <label><input type="checkbox" name="Osi"> Osi</label>
+    <label><input type="checkbox" name="Cl"> Cl</label>
+    <label><input type="checkbox" name="Int"> Int</label>
+    <label><input type="checkbox" name="Opt"> Opt</label>
   </div>
+</div>
 
-  <div class="row-field">
-    <label>Prestation(s) vendue(s)</label>
-    <div class="checkbox-group">
-      <label><input type="checkbox" name="Mes"> Mes</label>
-      <label><input type="checkbox" name="Exp"> Exp</label>
-      <label><input type="checkbox" name="Euro"> Euro</label>
-      <label><input type="checkbox" name="Pal"> Pal</label>
-      <label><input type="checkbox" name="Lot"> Lot</label>
-      <label><input type="checkbox" name="S+"> S+</label>
-      <label><input type="checkbox" name="Hpd"> Hpd</label>
-      <label><input type="checkbox" name="Xps"> Xps</label>
-      <label><input type="checkbox" name="Osi"> Osi</label>
-      <label><input type="checkbox" name="Cl"> Cl</label>
-      <label><input type="checkbox" name="Int"> Int</label>
-      <label><input type="checkbox" name="Opt"> Opt</label>
-    </div>
+<div class="row-inputs">
+  <div class="cell-input"><input type="text" name="Compte ERM"></div>
+  <div class="cell-input"><input type="text" name="Nom"></div>
+  <label><input type="checkbox" name="Kg"> Kg</label>
+  <div class="cell-input checkbox-group">
+    <label><input type="checkbox" name="Mes"> Mes</label>
+    <label><input type="checkbox" name="Exp"> Exp</label>
+    <label><input type="checkbox" name="Euro"> Euro</label>
+    <label><input type="checkbox" name="Pal"> Pal</label>
+    <label><input type="checkbox" name="Lot"> Lot</label>
+    <label><input type="checkbox" name="S+"> S+</label>
+    <label><input type="checkbox" name="Hpd"> Hpd</label>
+    <label><input type="checkbox" name="Xps"> Xps</label>
+    <label><input type="checkbox" name="Osi"> Osi</label>
+    <label><input type="checkbox" name="Cl"> Cl</label>
+    <label><input type="checkbox" name="Int"> Int</label>
+    <label><input type="checkbox" name="Opt"> Opt</label>
   </div>
+</div>
+<div class="row-inputs">
+  <div class="cell-input"><input type="text" name="Compte ERM"></div>
+  <div class="cell-input"><input type="text" name="Nom"></div>
+  <label><input type="checkbox" name="Kg"> Kg</label>
+  <div class="cell-input checkbox-group">
+    <label><input type="checkbox" name="Mes"> Mes</label>
+    <label><input type="checkbox" name="Exp"> Exp</label>
+    <label><input type="checkbox" name="Euro"> Euro</label>
+    <label><input type="checkbox" name="Pal"> Pal</label>
+    <label><input type="checkbox" name="Lot"> Lot</label>
+    <label><input type="checkbox" name="S+"> S+</label>
+    <label><input type="checkbox" name="Hpd"> Hpd</label>
+    <label><input type="checkbox" name="Xps"> Xps</label>
+    <label><input type="checkbox" name="Osi"> Osi</label>
+    <label><input type="checkbox" name="Cl"> Cl</label>
+    <label><input type="checkbox" name="Int"> Int</label>
+    <label><input type="checkbox" name="Opt"> Opt</label>
+  </div>
+</div>
+<div class="row-inputs">
+  <div class="cell-input"><input type="text" name="Compte ERM"></div>
+  <div class="cell-input"><input type="text" name="Nom"></div>
+  <label><input type="checkbox" name="Kg"> Kg</label>
+  <div class="cell-input checkbox-group">
+    <label><input type="checkbox" name="Mes"> Mes</label>
+    <label><input type="checkbox" name="Exp"> Exp</label>
+    <label><input type="checkbox" name="Euro"> Euro</label>
+    <label><input type="checkbox" name="Pal"> Pal</label>
+    <label><input type="checkbox" name="Lot"> Lot</label>
+    <label><input type="checkbox" name="S+"> S+</label>
+    <label><input type="checkbox" name="Hpd"> Hpd</label>
+    <label><input type="checkbox" name="Xps"> Xps</label>
+    <label><input type="checkbox" name="Osi"> Osi</label>
+    <label><input type="checkbox" name="Cl"> Cl</label>
+    <label><input type="checkbox" name="Int"> Int</label>
+    <label><input type="checkbox" name="Opt"> Opt</label>
+  </div>
+</div>
+<div class="row-inputs">
+  <div class="cell-input"><input type="text" name="Compte ERM"></div>
+  <div class="cell-input"><input type="text" name="Nom"></div>
+  <label><input type="checkbox" name="Kg"> Kg</label>
+  <div class="cell-input checkbox-group">
+    <label><input type="checkbox" name="Mes"> Mes</label>
+    <label><input type="checkbox" name="Exp"> Exp</label>
+    <label><input type="checkbox" name="Euro"> Euro</label>
+    <label><input type="checkbox" name="Pal"> Pal</label>
+    <label><input type="checkbox" name="Lot"> Lot</label>
+    <label><input type="checkbox" name="S+"> S+</label>
+    <label><input type="checkbox" name="Hpd"> Hpd</label>
+    <label><input type="checkbox" name="Xps"> Xps</label>
+    <label><input type="checkbox" name="Osi"> Osi</label>
+    <label><input type="checkbox" name="Cl"> Cl</label>
+    <label><input type="checkbox" name="Int"> Int</label>
+    <label><input type="checkbox" name="Opt"> Opt</label>
+  </div>
+</div>
+
+
+
 
   <!-- Options supplémentaires -->
   <div class="row-field1">
