@@ -1,29 +1,212 @@
+<link rel="stylesheet" href="style.css">
 <form name="contact" method="POST" netlify>
-  <!-- Khai báo tên form để Netlify nhận diện -->
   <input type="hidden" name="form-name" value="contact">
 
-  <!-- Trường nhập liệu -->
-  <input type="text" name="name" required>
-  <input type="email" name="email" required>
-  <input type="text" name="message" required>
+  <h1>DEMANDE D'INSTALLATION DE STATION CHARGEUR SIGMA</h1>
+  <h2>Zone à compléter par le service commercial</h2>
+<div class="row-date-pair">
+  <div class="date-block">
+    <label for="date-demande">Date demande</label>
+    <input type="date" id="date-demande" name="Date demande">
+  </div>
 
-  <!-- Honeypot chống spam -->
+  <div class="date-block">
+    <label for="date-service">Date de mise en service demandée</label>
+    <input type="date" id="date-service" name="Date mise en service">
+  </div>
+</div>
+
+  <script>
+    const today = new Date().toISOString().split("T")[0];
+    document.getElementById("date-demande").value = today;
+    document.getElementById("date-service").value = today;
+  </script>
+
+  <div class="row-field">
+    <label for="nb-exp">Nb d'expéditions / Jours prévues</label>
+    <input type="text" id="nb-exp" name="Nb expéditions">
+  </div>
+
+  <div class="row-field">
+    <label for="nb-colis">Nb de colis par jours</label>
+    <input type="text" id="nb-colis" name="Nb colis">
+  </div>
+
+  <div class="row-field">
+    <label for="produit">Produit</label>
+    <input type="text" id="produit" name="Produit" required>
+  </div>
+
+  <div class="row-field">
+    <label for="agence">Agence</label>
+    <input type="text" id="agence" name="Agence">
+  </div>
+
+  <div class="row-field">
+    <label for="siret">Siret</label>
+    <input type="text" id="siret" name="Siret">
+  </div>
+
+  <div class="row-field">
+    <label for="gtf">N° GTF</label>
+    <input type="text" id="gtf" name="N° GTF">
+  </div>
+
+ <!-- Commercial & Présence -->
+<div class="row-pair">
+  <div class="pair-block">
+    <label for="commercial">Commercial</label>
+    <input type="text" id="commercial" name="Commercial">
+  </div>
+
+  <div class="pair-block">
+    <label for="presence">Souhaite être présent lors de l'installation</label>
+    <select id="presence" name="Présence installation">
+      <option value="Oui">Oui</option>
+      <option value="Non">Non</option>
+    </select>
+  </div>
+</div>
+
+<!-- Raison sociale & SIRET administratif -->
+<div class="row-pair">
+  <div class="pair-block">
+    <label for="raison">Raison sociale</label>
+    <input type="text" id="raison" name="Raison sociale">
+  </div>
+
+  <div class="pair-block">
+    <label for="siret-admin">SIRET administratif</label>
+    <input type="text" id="siret-admin" name="SIRET administratif">
+  </div>
+</div>
+  <div class="row-field">
+    <label for="adresse">Adresse d'installation</label>
+    <input type="text" id="adresse" name="Adresse d'installation">
+  </div>
+
+<!-- UTILISATEUR & DECIDEUR -->
+<div class="row-pair">
+  <div class="pair-block">
+    <label for="utilisateur">UTILISATEUR</label>
+    <input type="text" id="utilisateur" name="UTILISATEUR">
+  </div>
+
+  <div class="pair-block">
+    <label for="decideur">DECIDEUR</label>
+    <input type="text" id="decideur" name="DECIDEUR">
+  </div>
+</div>
+
+<!-- Téléphone & Téléphone -->
+<div class="row-pair">
+  <div class="pair-block">
+    <label for="tel-util">Téléphone</label>
+    <input type="text" id="tel-util" name="Téléphone UTILISATEUR">
+  </div>
+
+  <div class="pair-block">
+    <label for="tel-decideur">Téléphone</label>
+    <input type="text" id="tel-decideur" name="Téléphone DECIDEUR">
+  </div>
+</div>
+
+<div class="row-field">
+  <label for="email-util">E-mail</label>
+  <input type="text" id="email-util" name="Email">
+</div>
+
+  <div class="row-field">
+    <label for="erm">Compte ERM</label>
+    <input type="text" id="erm" name="Compte ERM">
+  </div>
+
+  <div class="row-field">
+    <label for="nom">Nom</label>
+    <input type="text" id="nom" name="Nom">
+  </div>
+
+  <div class="row-field">
+    <label for="taxe">Taxe</label>
+    <input type="text" id="taxe" name="Taxe">
+  </div>
+
+  <div class="row-field">
+    <label>Prestation(s) vendue(s)</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="Mes"> Mes</label>
+      <label><input type="checkbox" name="Exp"> Exp</label>
+      <label><input type="checkbox" name="Euro"> Euro</label>
+      <label><input type="checkbox" name="Pal"> Pal</label>
+      <label><input type="checkbox" name="Lot"> Lot</label>
+      <label><input type="checkbox" name="S+"> S+</label>
+      <label><input type="checkbox" name="Hpd"> Hpd</label>
+      <label><input type="checkbox" name="Xps"> Xps</label>
+      <label><input type="checkbox" name="Osi"> Osi</label>
+      <label><input type="checkbox" name="Cl"> Cl</label>
+      <label><input type="checkbox" name="Int"> Int</label>
+      <label><input type="checkbox" name="Opt"> Opt</label>
+    </div>
+  </div>
+
+  <!-- Options supplémentaires -->
+  <div class="row-field1">
+    <label for="fichier">Intégration du fichier destinataires</label>
+    <select id="fichier" name="Fichier destinataires">
+      <option value="Oui">Oui</option>
+      <option value="Non">Non</option>
+    </select>
+  </div>
+
+  <div class="row-field1">
+    <label for="retour">Retour d'information sur la station</label>
+    <select id="retour" name="Retour station">
+      <option value="Oui">Oui</option>
+      <option value="Non">Non</option>
+    </select>
+  </div>
+
+  <div class="row-field1">
+    <label for="mode">Mode de fonctionnement de la station</label>
+    <select id="mode" name="Mode fonctionnement">
+      <option value="Manuel">Manuel</option>
+      <option value="Automatique">Automatique</option>
+    </select>
+  </div>
+
+  <div class="row-field1">
+    <label for="tarif">Intégration du tarif messagerie</label>
+    <select id="tarif" name="Tarif messagerie">
+      <option value="Oui">Oui</option>
+      <option value="Non">Non</option>
+    </select>
+  </div>
+
+  <div class="row-field1">
+    <label for="regroupement">Regroupement des expéditions en messagerie</label>
+    <select id="regroupement" name="Regroupement messagerie">
+      <option value="Oui">Oui</option>
+      <option value="Non">Non</option>
+    </select>
+  </div>
+
+  <div class="row-field1">
+    <label for="activation">Activation de l'annonce</label>
+    <select id="activation" name="Activation annonce">
+      <option value="Oui">Oui</option>
+      <option value="Non">Non</option>
+    </select>
+  </div>
+
+  <div class="row-field1">
+    <label for="imprimante">Imprimante thermique fournie par Heppner</label>
+    <select id="imprimante" name="Imprimante thermique">
+      <option value="Oui">Oui</option>
+      <option value="Non">Non</option>
+    </select>
+  </div>
+
   <input type="hidden" name="_gotcha" style="display:none !important">
-
-  <!-- Checkbox -->
-  <input type="checkbox" name="subscribe" value="yes" checked>
-  <input type="hidden" name="subscribe" value="no">
-
-  <!-- Radio -->
-  <input type="radio" name="gender" value="male" checked>
-  <input type="radio" name="gender" value="female">
-  <input type="radio" name="gender" value="other">
-
-  <!-- Select -->
-  <select name="work-experience">
-    <option value="one-year">0-1 years</option>
-    <option value="one-five-years">1-5 years</option>
-  </select>
-
-  <button type="submit">Send</button>
+  <button type="submit">Envoyer</button>
 </form>
+
