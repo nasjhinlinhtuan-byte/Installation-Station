@@ -258,8 +258,8 @@ select:focus {
 .row-labels,
 .row-inputs {
   display: grid;
-  grid-template-columns: 0.5fr 0.5fr 0fr 2fr;
-  gap: 0  px;
+  grid-template-columns: 0.5fr 0.5fr 0.15fr 2fr;
+  gap: 0px;
   margin-bottom: 12px;
 }
 
@@ -274,7 +274,7 @@ select:focus {
 
 .cell-input {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
 }
 
