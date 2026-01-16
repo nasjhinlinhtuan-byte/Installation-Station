@@ -49,11 +49,14 @@
     <input type="text" id="produit" name="Produit" required>
   </div>
 
+
+
+
   <div class="row-field">
     <label for="agence">Agence</label>
     <select id="agence">
       <option value="">-- Choisir une agence --</option>
-       <option value="10 HEPPNER 01">10 HEPPNER 01</option>
+      <option value="10 HEPPNER 01">10 HEPPNER 01</option>
       <option value="10 HEPPNER 03">10 HEPPNER 03</option>
       <option value="10 HEPPNER 04">10 HEPPNER 04</option>
       <option value="10 HEPPNER 30">10 HEPPNER 30</option>
@@ -61,34 +64,47 @@
   </div>
 
   <div class="row-field">
-    <label for="Nom agence"></label>
-    <input type="text" id="Nom agence" readonly>
+    <label for="commercial"></label>
+    <input type="text" id="commercial" readonly>
   </div>
 
   <div class="row-field">
     <label for="siret">SIRET</label>
     <input type="text" id="siret" readonly>
   </div>
+</div>
+
+
+  <div class="row-field">
+    <label for="gtf">N° GTF</label>
+    <input type="text" id="gtf" readonly>
+  </div>
+
+
 
 <!--tu dong dien -->
 
 <script>
   const agenceData = {
     "10 HEPPNER 01": {
-      siret: "123 456 789 00084",
-      gtf: "HEPPNER STRASBOURG"
+      siret: "76,980,020,200,020",
+      gtf: "211,032",
+      commercial: "HEPPNER STRASBOURG"
     },
     "10 HEPPNER 03": {
-      siret: "987 654 321 00075",
-      gtf: "HEPPNER METZ"
+      siret: "76,980,020,200,087",
+      gtf: "211,018",
+      commercial: "HEPPNER METZ"
     },
     "10 HEPPNER 04": {
-      siret: "456 789 123 00069",
-      gtf: "HEPPNER NANCY"
+      siret: "76,980,020,200,012",
+      gtf: "211,021",
+      commercial: "HEPPNER NANCY"
     },
     "10 HEPPNER 30": {
-      siret: "456 789 123 00069",
-      gtf: "HEPPNER MULHOUSE"
+      siret: "76,980,020,200,012",
+      gtf: "211,021",
+      commercial: "HEPPNER NANCY"
     }
   };
 
@@ -97,16 +113,14 @@
     const data = agenceData[selected] || {};
 
     document.getElementById("siret").value = data.siret || "";
-    document.getElementById("Nom agence").value = data.gtf || "";
+    document.getElementById("gtf").value = data.gtf || "";
+    document.getElementById("commercial").value = data.commercial || "";
   });
 </script>
 
 
 
-  <div class="row-field">
-    <label for="gtf">N° GTF</label>
-    <input type="text" id="gtf" name="N° GTF">
-  </div>
+
 
  <!-- Commercial & Présence -->
 <div class="row-pair">
