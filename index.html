@@ -51,13 +51,57 @@
 
   <div class="row-field">
     <label for="agence">Agence</label>
-    <input type="text" id="agence" name="Agence">
+    <select id="agence">
+      <option value="">-- Choisir une agence --</option>
+       <option value="10 HEPPNER 01">10 HEPPNER 01</option>
+      <option value="10 HEPPNER 03">10 HEPPNER 03</option>
+      <option value="10 HEPPNER 04">10 HEPPNER 04</option>
+      <option value="10 HEPPNER 30">10 HEPPNER 30</option>
+    </select>
   </div>
 
   <div class="row-field">
-    <label for="siret">Siret</label>
-    <input type="text" id="siret" name="Siret">
+    <label for="Nom agence"></label>
+    <input type="text" id="Nom agence" readonly>
   </div>
+
+  <div class="row-field">
+    <label for="siret">SIRET</label>
+    <input type="text" id="siret" readonly>
+  </div>
+
+<!--tu dong dien -->
+
+<script>
+  const agenceData = {
+    "10 HEPPNER 01": {
+      siret: "123 456 789 00084",
+      gtf: "HEPPNER STRASBOURG"
+    },
+    "10 HEPPNER 03": {
+      siret: "987 654 321 00075",
+      gtf: "HEPPNER METZ"
+    },
+    "10 HEPPNER 04": {
+      siret: "456 789 123 00069",
+      gtf: "HEPPNER NANCY"
+    },
+    "10 HEPPNER 30": {
+      siret: "456 789 123 00069",
+      gtf: "HEPPNER MULHOUSE"
+    }
+  };
+
+  document.getElementById("agence").addEventListener("change", function () {
+    const selected = this.value;
+    const data = agenceData[selected] || {};
+
+    document.getElementById("siret").value = data.siret || "";
+    document.getElementById("Nom agence").value = data.gtf || "";
+  });
+</script>
+
+
 
   <div class="row-field">
     <label for="gtf">N° GTF</label>
